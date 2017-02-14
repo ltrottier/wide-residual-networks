@@ -83,13 +83,13 @@ local function backward(self, method, input, gradOutput, scale)
 
             local n1_mean = self.n1:mean()
             local n2_mean = self.n2:mean()
-            print(n1_mean, n2_mean)
+            --print(n1_mean, n2_mean)
             if n1_mean < n2_mean then
               self.gradInput:mul(n2_mean/n1_mean)
               self.n1:resize(input:size(1), 1, 1, 1)
                      :copy(torch.pow(self.gradInput,2):sum(2):sum(3):sum(4):sqrt())
               local new_n1_mean = self.n1:mean()
-              print('->', new_n1_mean)
+              --print('->', new_n1_mean)
             end
 
             self.gradInput:add(currentGradInput)
