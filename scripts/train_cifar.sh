@@ -7,6 +7,9 @@ export learningRateDecay=0
 export learningRateDecayRatio=0.2
 export nesterov=true
 export randomcrop_type=reflection
+#export nGPU=0
+#export data_type="torch.FloatTensor"
+#export depth=10
 
 # tee redirects stdout both to screen and to file
 # have to create folder for script and model beforehand

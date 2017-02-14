@@ -15,7 +15,7 @@ local iterm = require 'iterm'
 require 'iterm.dot'
 
 local opt = {
-  dataset = './datasets/cifar10_whitened.t7',
+  dataset = './datasets/cifar10.t7',
   save = 'logs',
   batchSize = 128,
   learningRate = 0.1,
@@ -26,7 +26,7 @@ local opt = {
   momentum = 0.9,
   epoch_step = "80",
   max_epoch = 300,
-  model = 'nin',
+  model = 'wide-resnet-norm',
   optimMethod = 'sgd',
   init_value = 10,
   depth = 50,
@@ -38,7 +38,7 @@ local opt = {
   imageSize = 32,
   randomcrop_type = 'zero',
   cudnn_deterministic = false,
-  optnet_optimize = true,
+  optnet_optimize = false,
   generate_graph = false,
   multiply_input_factor = 1,
   widen_factor = 1,
